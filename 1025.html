@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>早餐吃什麼</title>
+    <style>
+        body {
+            background-color: #F9C784;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            background-color: #FFFFFF;
+            color: #FF8C42;
+            border: none;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="chooseBreakfast()">TRY TRY看</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        function chooseBreakfast() {
+            const breakfasts = [
+                "燒餅", "蛋餅", "蘿蔔糕", "漢堡", "三明治", "吐司", "歐姆蛋", 
+                "鬆餅", "饅頭夾蛋", "傳統飯糰", "蔥抓餅", "水煎包", "麵包", 
+                "三角飯糰", "鐵板麵", "炒泡麵", "包子", "貝果", "麵線", 
+                "油條", "鹹豆漿", "小熱狗"
+            ];
+            const randomIndex = Math.floor(Math.random() * breakfasts.length);
+            document.getElementById("result").innerText = breakfasts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
